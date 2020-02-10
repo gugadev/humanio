@@ -1,3 +1,5 @@
 type Query {
-  skills: [Skill]
+	skills: [Skill]
+	clients: [Client]
+	employees: [Employee]
 }

@@ -1,6 +1,0 @@
-type Academic {
-	profession: String
-	centre: String
-	degree: String
-	status: String
-}

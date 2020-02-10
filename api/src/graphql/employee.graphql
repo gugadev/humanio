@@ -1,6 +1,10 @@
 type Employee {
 	data: Person
-	academic: Academic
+	title: String
+	studyCenter: String
+	degree: String
+	studying: Boolean
+	photo: String
 	client: Client
 	skills: [Skill]
 }
