@@ -1,0 +1,8 @@
+type Person {
+  firstName: String
+  lastName: String
+  dni: Int
+  address: String
+  phone: String
+  email: String
+}

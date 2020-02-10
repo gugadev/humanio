@@ -1,0 +1,6 @@
+type Employee {
+	data: Person
+	academic: Academic
+	client: Client
+	skills: [Skill]
+}
