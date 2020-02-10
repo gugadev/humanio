@@ -5,21 +5,19 @@
  */
 
 /* tslint:disable */
-export class Academic {
-    profession?: string;
-    studyHouse?: string;
-    degree?: string;
-    status?: string;
-}
-
 export class Client {
-    plate?: string;
+    id?: number;
+    name?: string;
 }
 
 export class Employee {
     data?: Person;
-    academic?: Academic;
-    client?: string;
+    title?: string;
+    studyCenter?: string;
+    degree?: string;
+    studying?: boolean;
+    photo?: string;
+    client?: Client;
     skills?: Skill[];
 }
 
@@ -34,8 +32,13 @@ export class Person {
 
 export abstract class IQuery {
     abstract skills(): Skill[] | Promise<Skill[]>;
+
+    abstract clients(): Client[] | Promise<Client[]>;
+
+    abstract employees(): Employee[] | Promise<Employee[]>;
 }
 
 export class Skill {
+    id?: number;
     name?: string;
 }
