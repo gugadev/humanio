@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
-import { ClientResolver } from "./client.resolver";
-import { ClientService } from "./client.service";
-import { Client } from "./client.model";
+import { ClientResolver } from "src/client/client.resolver";
+import { ClientService } from "src/client/client.service";
+import { Client } from "src/client/client.model";
 
 @Module({
   imports: [
