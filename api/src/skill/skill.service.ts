@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common"
 import { InjectRepository } from "@nestjs/typeorm"
 import { Repository } from "typeorm"
-import { Skill } from "./skill.model"
+import { Skill } from "src/skill/skill.model"
 
 @Injectable()
 export class SkillService {

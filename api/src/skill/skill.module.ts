@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common"
 import { TypeOrmModule } from "@nestjs/typeorm"
-import { SkillResolver } from "./skill.resolver"
-import { SkillService } from "./skill.service"
-import { Skill } from "./skill.model"
+import { SkillResolver } from "src/skill/skill.resolver"
+import { SkillService } from "src/skill/skill.service"
+import { Skill } from "src/skill/skill.model"
 
 @Module({
   imports: [
