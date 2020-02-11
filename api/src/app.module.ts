@@ -2,14 +2,14 @@ import { join } from 'path'
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql'
 import { TypeOrmModule } from '@nestjs/typeorm'
-import { SkillModule } from './skill/skill.module';
-import { ClientModule } from './client/client.module';
-import { EmployeeModule } from './employee/employee.module';
-import { Skill } from './skill/skill.model';
 import { Connection } from 'typeorm'
-import { Client } from './client/client.model';
-
-console.log(join(process.cwd(), 'data.db'))
+import { SkillModule } from 'src/skill/skill.module'
+import { ClientModule } from 'src/client/client.module'
+import { EmployeeModule } from 'src/employee/employee.module'
+import { Skill } from 'src/skill/skill.model'
+import { Client } from 'src/client/client.model'
+import { Person } from 'src/employee/person.model'
+import { Employee } from 'src/employee/employee.model'
 
 @Module({
   imports: [
@@ -23,7 +23,7 @@ console.log(join(process.cwd(), 'data.db'))
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: join(process.cwd(), 'data.db'),
-      entities: [Skill, Client],
+      entities: [Skill, Client, Person, Employee],
       logging: true,
       synchronize: false
     }),
